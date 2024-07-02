@@ -1,0 +1,296 @@
+@charset "UTF-8";
+/* Variables */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;0,700;1,500&family=Kanit:ital,wght@0,400;0,500;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-primary{
+  background-color: #1a237e !important;
+}
+
+.btn-primary{
+  background-color: #1a237e !important;
+  border-color: #303f9f;
+}
+
+.imagen{
+  display: block;
+  border-radius: 10%;
+  margin: auto;
+  width:60%;
+  align-items: center;
+}
+
+.maps{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius: 20px;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 2px 2px 12px 0px #888;
+}
+
+.imagen_maps{
+  display: block;
+  border: 2px solid #888;
+  border-collapse: collapse;
+  border-radius: 5%;
+  margin: auto;
+  width:100%;
+  align-items: center;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #f4f4f4;
+}
+
+header .logo {
+  text-align: center;
+
+}
+
+.boton_nav{
+  color:blue;
+  text-decoration: none;
+}
+
+header .search-bar input {
+  width: 180%; /* Hacer la barra de búsqueda 3 veces más grande */
+}
+
+header .btn-login {
+  border: 2px solid white;
+  color: white;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+
+header .btn-login:hover {
+  background-color: white;
+  color: black;
+}
+
+/*Barra de Navegación*/
+
+.header-nav{
+    background-color:#303f9f;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    padding: 0px 10%;
+}
+
+.header-nav .nav-links{
+    list-style: none;
+}
+
+.header-nav .nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header-nav .nav-links li:hover{
+    transform: scale(1.2);
+}
+
+.header-nav .nav-links a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+
+.header-nav .nav-links li a:hover{
+    color: #e8eaf6;
+}
+
+.header-nav .nav-links .link-selected{
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+}
+.header-nav .nav-links .link-selected a{
+    border: none;
+    border-radius: 20px;
+    color:#1a237e;
+}
+.header-nav .nav-links .link-selected a{
+    font-size: 22px;
+}
+
+.header-nav .nav-links .link-selected a:hover{
+    color:#1a237e;
+}
+.header-nav .nav-links .link-selected:hover{
+    transform: scale(1);
+}
+
+
+/*--------------------------------------------------------------------------------------------*/
+
+.section-bar .nav {
+  margin: 0px;
+}
+
+.section-link {
+  color: black; /* Cambiar el color de las secciones a negro */
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.separator {
+  color: black; /* Cambiar el color de las líneas verticales a negro */
+}
+
+.section-link:hover {
+  text-decoration: underline;
+}
+
+/* Carrusel de Productos */
+.carousel-indicators {
+  justify-content: center;
+}
+
+.carousel-inner {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  border-radius: 10px;
+}
+
+#carouselExampleCaptions {
+  padding: 3em 7em;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%; /* Ajusta el ancho del carrusel */
+  max-width: 1200px; /* Ajusta el ancho máximo del carrusel */
+  height: 350px; /* Fijar la altura del carrusel */
+}
+
+#carousel-grid {
+  display: grid;
+  grid-template-areas: "texto image";
+  justify-content: center;
+  align-items: center;
+  background-color: white; /* Fondo blanco */
+  border: 2px solid #ccc; /* Contorno */
+  border-radius: 10px;
+  padding: 20px; /* Padding interno para dar espacio */
+  height: 100%; /* Asegurar que el carrusel tenga una altura fija */
+}
+
+#carousel-grid img {
+  grid-area: image;
+  width: 300px; /* Ajusta el ancho de la imagen */
+  height: 200px; /* Ajusta la altura de la imagen */
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+#carousel-grid .info {
+  grid-area: texto;
+  font-family: "Kanit", sans-serif;
+  padding-right: 20px; /* Espacio entre texto e imagen */
+}
+
+#carousel-grid .info h4 {
+  margin-bottom: 10px;
+}
+
+#carousel-grid .info p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+#carousel-grid .btn-primary {
+  display: block;
+  margin-top: 1em;
+  font-size: 0.8em;
+  padding: 0.5em 1em;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #535353;
+  width: 2em;
+  height: 2em;
+}
+
+.carousel-indicators button {
+  width: 10px; /* Hacer los botones 3 veces más grandes */
+  height: 10px;
+  border-radius: 50%; /* Asegurar que sean redondos */
+  margin: 0 5px; /* Separarlos un poco */
+  padding: 0%;
+}
+
+/* Modal de inicio de sesión */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1200;
+  left: 0;
+  top: 0;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+  background-color:#1a237e;
+}
+
+footer {
+  background-color: black;
+  padding: 40px;
+  color: white;
+  text-align: center;
+}
+
+address {
+  margin: 0 auto;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+/*# sourceMappingURL=styles.css.map */
