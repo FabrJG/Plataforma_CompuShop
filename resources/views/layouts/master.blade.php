@@ -28,19 +28,41 @@
             </form>
         </div>
     </div>
-    <header class="bg-primary text-white p-4 text-center" style="margin-bottom:1px">
+    <header class="bg-primary text-white p-3 text-center" style="margin-bottom:1px">
         <div class="container">
             <div class="logo">
-                <img src="./Images/LOGO/logo-marca.png" alt="CompuShop Logo" class="img-fluid">
+                <img src="https://i.imgur.com/FXxJgZm.png" alt="CompuShop Logo" class="img-fluid imagen-logo">
             </div>
         </div>
         <div class="container mt-3 d-flex justify-content-between align-items-center">
-            <div class="search-bar" style="width: 43%;">
+            <div class="search-bar" style="width: 38%;">
                 <input type="text" class="form-control" placeholder="Buscar productos...">
             </div>
             <div class="login">
-                <button class="btn btn-login btn-outline-dark" onclick="showLogin()">Iniciar Sesión</button>
-                <button class="btn btn-login btn-outline-dark" onclick="#">Registrarse</button>
+                @auth
+                    @if (Auth::user()->rol==='admin')
+                        <a href="{{route('register')}}"><button class="btn btn-login btn-outline-dark" onclick="#">Ver Clientes</button></a>
+                        <a href="{{route('register')}}"><button class="btn btn-login btn-outline-dark" onclick="#">Ver Pedidos</button></a>
+                        
+                        @elseif (Auth::user()->rol==='user')
+                            <a href="{{route('register')}}"><button class="btn btn-login btn-outline-dark" onclick="#">Mis Pedidos</button></a>
+                            <a href="{{route('register')}}"><button class="btn btn-login btn-outline-dark" onclick="#">Mi Perfil</button></a>
+                    @endif
+                    <a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+                        <button class="btn btn-login btn-outline-dark" >{{ __('Logout') }}</button>
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
+                    @else
+                    <a href="{{route('login')}}"><button class="btn btn-login btn-outline-dark" >Iniciar Sesión</button></a>
+                    <a href="{{route('register')}}"><button class="btn btn-login btn-outline-dark" onclick="#">Registrarse</button></a>
+                @endauth
+                <!--onclick="showLogin()"-->
+                <!--<a href="{{route('login')}}"><button class="btn btn-login btn-outline-dark" >Iniciar Sesión</button></a>-->
+                    
             </div>
         </div>
     </header>

@@ -10,7 +10,7 @@
         <ul class="nav-links" style="padding-top:13px">
             <li><a href="{{ route('home') }}">Inicio</a></li>
             <li><a href="{{ route('productos') }}">Productos</a></li>
-            <li><a>Ofertas</a></li>
+            <li><a href="{{ route('ofertas') }}">Ofertas</a></li>
             <li class="link-selected"><a href="{{ route('visitanos') }}">Visítanos</a></li>
             <li><a href="#">Ayuda</a></li>
         </ul>
